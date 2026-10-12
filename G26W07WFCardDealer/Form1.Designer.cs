@@ -28,12 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            Card1 = new PictureBox();
+            btnDeal = new Button();
+            ((System.ComponentModel.ISupportInitialize)Card1).BeginInit();
+            SuspendLayout();
+            // 
+            // Card1
+            // 
+            Card1.Image = Properties.Resources.red_joker;
+            Card1.Location = new Point(11, 12);
+            Card1.Name = "Card1";
+            Card1.Size = new Size(316, 456);
+            Card1.SizeMode = PictureBoxSizeMode.Zoom;
+            Card1.TabIndex = 0;
+            Card1.TabStop = false;
+            // 
+            // btnDeal
+            // 
+            btnDeal.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnDeal.Location = new Point(12, 474);
+            btnDeal.Name = "btnDeal";
+            btnDeal.Size = new Size(316, 72);
+            btnDeal.TabIndex = 1;
+            btnDeal.Text = "카드 분배";
+            btnDeal.UseVisualStyleBackColor = true;
+            btnDeal.Click += OnDeal;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Text = "Form1";
+            ClientSize = new Size(340, 558);
+            Controls.Add(btnDeal);
+            Controls.Add(Card1);
+            Name = "Form1";
+            Text = "카드딜러";
+            ((System.ComponentModel.ISupportInitialize)Card1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox Card1;
+        private Button btnDeal;
     }
 }
